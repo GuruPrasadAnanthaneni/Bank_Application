@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Java build folders
+target/
+build/
+
+# IDE files
+.idea/
+.project
+.classpath
+.settings/
+.vscode/
+
+# Logs
+*.log
+/build/

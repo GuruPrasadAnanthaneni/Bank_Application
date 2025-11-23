@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+         https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <!-- WELCOME PAGE -->
+    <welcome-file-list>
+        <welcome-file>BankDashboard.jsp</welcome-file>
+    </welcome-file-list>
+
+
+    <!-- ===========================
+            AUTHENTICATION SERVLETS
+        =========================== -->
+
+    <!-- LOGIN -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <!-- SIGNUP -->
+    <servlet>
+        <servlet-name>SignupServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.SignupServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignupServlet</servlet-name>
+        <url-pattern>/SignUp</url-pattern>
+    </servlet-mapping>
+    
+    <!-- FORGOT PASSWORD -->
+	<servlet>
+	    <servlet-name>ForgotPasswordServlet</servlet-name>
+	    <servlet-class>in.ps.bankapp.web.ForgotPasswordServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>ForgotPasswordServlet</servlet-name>
+	    <url-pattern>/ForgotPassword</url-pattern>
+	</servlet-mapping>
+    
+
+
+    <!-- ===========================
+               DASHBOARD
+        =========================== -->
+
+    <!-- USER DASHBOARD -->
+    <servlet>
+        <servlet-name>BankDashboardServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.BankDashboardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BankDashboardServlet</servlet-name>
+        <url-pattern>/dashboard</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- ===========================
+               ADMIN SERVLETS
+        =========================== -->
+
+    <!-- ADMIN DASHBOARD -->
+    <servlet>
+        <servlet-name>AdminDashboardServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.AdminDashboardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminDashboardServlet</servlet-name>
+        <url-pattern>/admin/dashboard</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- VIEW ALL CUSTOMERS -->
+    <servlet>
+        <servlet-name>AdminViewCustomersServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.AdminViewCustomersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminViewCustomersServlet</servlet-name>
+        <url-pattern>/admin/customers</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- VIEW ALL ACCOUNTS -->
+    <servlet>
+        <servlet-name>AdminViewAccountsServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.AdminViewAccountsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminViewAccountsServlet</servlet-name>
+        <url-pattern>/admin/accounts</url-pattern>
+    </servlet-mapping>
+
+    <!-- VIEW ALL TRANSACTIONS -->
+    <servlet>
+        <servlet-name>AdminViewTransactionsServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.AdminViewTransactionsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminViewTransactionsServlet</servlet-name>
+        <url-pattern>/admin/transactions</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- PENDING CUSTOMER APPROVAL -->
+    <servlet>
+        <servlet-name>AdminPendingCustomerApprovalServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.AdminPendingCustomerApprovalServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminPendingCustomerApprovalServlet</servlet-name>
+        <url-pattern>/admin/pending-customers</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- PENDING ACCOUNT APPROVAL -->
+    <servlet>
+        <servlet-name>AdminPendingAccountApprovalServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.AdminPendingAccountApprovalServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminPendingAccountApprovalServlet</servlet-name>
+        <url-pattern>/admin/pending-accounts</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- BLOCKED ACCOUNTS -->
+    <servlet>
+        <servlet-name>AdminBlockedAccountsServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.AdminBlockedAccountsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminBlockedAccountsServlet</servlet-name>
+        <url-pattern>/admin/blocked</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- BLOCKED CUSTOMERS -->
+    <servlet>
+        <servlet-name>AdminBlockedCustomersServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.AdminBlockedCustomersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminBlockedCustomersServlet</servlet-name>
+        <url-pattern>/admin/blocked-customers</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- CUSTOMER APPROVE -->
+    <servlet>
+        <servlet-name>AdminApproveCustomerServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.AdminApproveCustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminApproveCustomerServlet</servlet-name>
+        <url-pattern>/admin/customer/approve</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- CUSTOMER REJECT -->
+    <servlet>
+        <servlet-name>AdminRejectCustomerServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.AdminRejectCustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminRejectCustomerServlet</servlet-name>
+        <url-pattern>/admin/customer/reject</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- ACCOUNT APPROVE -->
+    <servlet>
+        <servlet-name>AdminApproveAccountServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.AdminApproveAccountServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminApproveAccountServlet</servlet-name>
+        <url-pattern>/admin/account/approve</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- ACCOUNT REJECT -->
+    <servlet>
+        <servlet-name>AdminRejectAccountServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.AdminRejectAccountServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminRejectAccountServlet</servlet-name>
+        <url-pattern>/admin/account/reject</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- VIEW CUSTOMER DETAILS -->
+    <servlet>
+        <servlet-name>AdminViewCustomerDetailsServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.AdminViewCustomerDetailsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminViewCustomerDetailsServlet</servlet-name>
+        <url-pattern>/admin/view-customer</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- EDIT CUSTOMER -->
+    <servlet>
+	    <servlet-name>AdminEditCustomerDetailsServlet</servlet-name>
+	    <servlet-class>in.ps.bankapp.web.AdminEditCustomerDetailsServlet</servlet-class>
+	</servlet>
+
+    <servlet-mapping>
+	    <servlet-name>AdminEditCustomerDetailsServlet</servlet-name>
+	    <url-pattern>/admin/edit-customer</url-pattern>
+	</servlet-mapping>
+
+
+
+    <!-- TOGGLE CUSTOMER BLOCK -->
+    <servlet>
+        <servlet-name>AdminToggleBlockCustomerServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.AdminToggleBlockCustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminToggleBlockCustomerServlet</servlet-name>
+        <url-pattern>/admin/toggle-block</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- DELETE CUSTOMER -->
+    <servlet>
+        <servlet-name>AdminDeleteCustomerServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.AdminDeleteCustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminDeleteCustomerServlet</servlet-name>
+        <url-pattern>/admin/delete-customer</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+	    <servlet-name>AdminViewAccountsDetailsServlet</servlet-name>
+	    <servlet-class>in.ps.bankapp.web.AdminViewAccountsDetailsServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	    <servlet-name>AdminViewAccountsDetailsServlet</servlet-name>
+	    <url-pattern>/admin/view-account-details</url-pattern>
+	</servlet-mapping>
+    
+	<servlet>
+	    <servlet-name>AdminEditAccountsDetailsServlet</servlet-name>
+	    <servlet-class>in.ps.bankapp.web.AdminEditAccountsDetailsServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	    <servlet-name>AdminEditAccountsDetailsServlet</servlet-name>
+	    <url-pattern>/admin/edit-account-details</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>AdminToggleAccountBlockServlet</servlet-name>
+	    <servlet-class>in.ps.bankapp.web.AdminToggleAccountBlockServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	    <servlet-name>AdminToggleAccountBlockServlet</servlet-name>
+	    <url-pattern>/admin/accounts/block</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>AdminDeleteAccountServlet</servlet-name>
+	    <servlet-class>in.ps.bankapp.web.AdminDeleteAccountServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	    <servlet-name>AdminDeleteAccountServlet</servlet-name>
+	    <url-pattern>/admin/accounts/delete</url-pattern>
+	</servlet-mapping>
+	
+	
+
+
+    <!-- ===========================
+             CUSTOMER SERVLETS
+        =========================== -->
+
+    <servlet>
+        <servlet-name>CustomerDashboardServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.CustomerDashboardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CustomerDashboardServlet</servlet-name>
+        <url-pattern>/customer/dashboard</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CustomerViewAccountsServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.CustomerViewAccountsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CustomerViewAccountsServlet</servlet-name>
+        <url-pattern>/customer/accounts</url-pattern>
+    </servlet-mapping>
+    
+    <!-- CUSTOMER CREATE ACCOUNT -->
+	<servlet>
+	    <servlet-name>CustomerCreateAccountServlet</servlet-name>
+	    <servlet-class>in.ps.bankapp.web.CustomerCreateAccountServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	    <servlet-name>CustomerCreateAccountServlet</servlet-name>
+	    <url-pattern>/customer/create-account</url-pattern>
+	</servlet-mapping>
+    
+
+    <servlet>
+        <servlet-name>CustomerCheckBalanceServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.CustomerCheckBalanceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CustomerCheckBalanceServlet</servlet-name>
+        <url-pattern>/customer/check-balance</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CustomerDepositServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.CustomerDepositServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CustomerDepositServlet</servlet-name>
+        <url-pattern>/customer/deposit</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CustomerTransferServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.CustomerTransferServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CustomerTransferServlet</servlet-name>
+        <url-pattern>/customer/transfer</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CustomerPassbookServlet</servlet-name>
+        <servlet-class>in.ps.bankapp.web.CustomerPassbookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CustomerPassbookServlet</servlet-name>
+        <url-pattern>/customer/passbook</url-pattern>
+    </servlet-mapping>
+
+</web-app>
