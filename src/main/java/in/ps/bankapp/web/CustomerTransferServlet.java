@@ -18,9 +18,10 @@ public class CustomerTransferServlet extends HttpServlet {
         HttpSession session = req.getSession(false);
 
         if (session == null || session.getAttribute("customer") == null) {
-            resp.sendRedirect("SignIn.jsp");
+            resp.sendRedirect(req.getContextPath() + "/SignIn.jsp");
             return;
         }
+
 
         Customer c = (Customer) session.getAttribute("customer");
 
@@ -40,9 +41,10 @@ public class CustomerTransferServlet extends HttpServlet {
         HttpSession session = req.getSession(false);
 
         if (session == null || session.getAttribute("customer") == null) {
-            resp.sendRedirect("SignIn.jsp");
+            resp.sendRedirect(req.getContextPath() + "/SignIn.jsp");
             return;
         }
+
 
         Customer customer = (Customer) session.getAttribute("customer");
 
